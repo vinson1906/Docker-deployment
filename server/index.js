@@ -7,7 +7,15 @@ app.use(cors())
 
 app.get("/api/get/message", async (req, res) => {
     res.json({
-        data: "hii He!"
+        data: "hii this is for learning purpose!"
+    })
+})
+
+app.post("/api/post/example",async(req,res) => {
+    const {data} = req.body;
+    res.json({
+        message:"posted successfully",
+        result:data
     })
 })
 
